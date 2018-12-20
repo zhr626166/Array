@@ -1,0 +1,78 @@
+'use strict';
+1.string 字符串
+    let str = `abckgdljlngas`;   \'   \"  length
+
+  新的数组
+    let newStr = str.toUpperCase();全大写；
+    let newStr = str.totoLowerCase();全小写；
+    let newStr = str.indexOf('c');有就返回位置，没有就返回-1；
+    let newStr = str.substring(0,5);从第一个开始，截取到第五个；substr();
+    let newStr = str.substring(10);从第11个开始，截取到最后一个；substr();
+    let newStr = str.substring();相当于复制；substr();
+
+
+2.array 数组  length;
+    let arr = [1,2,3,4,5,6,7,8,9];
+    arr.push(10）在末尾添加一个10 ； arr.push(10,11,12)  
+	原数组  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]   [1, 2, 3, 4, 5, 6, 7, 8, 9, 10，11,12]
+ 	新数组  返回数组的长度
+    arr.pop()  删除最后一位；
+	原数组  [1, 2, 3, 4, 5, 6, 7, 8]
+ 	新数组  9 返回被删除的数
+    arr.unshift(0) 在第一位添加一个0； 同push() 一样
+    arr.shift() 删除第一位； 同pop() 一样
+   arr.splice(3);从第三个开始，删除后面所有的  
+	原数组  [1, 2, 3]
+ 	新数组  [4, 5, 6, 7, 8, 9]
+    arr.splice(2,3);从第三个开始，删除3个    // 只删除,不添加:
+	原数组  [1, 2, 6, 7, 8, 9]
+ 	新数组  [3, 4, 5]
+    arr.splice(2,3,'a','b');从第三个开始，删除3个，并添加2个
+	原数组  [1, 2, "a", "b", 6, 7, 8, 9]
+ 	新数组  [3, 4, 5]
+    arr.splice(2,0,'a','b'); // 只添加,不删除
+	原数组  [1, 2, "a", "b", 3, 4, 5, 6, 7, 8, 9]
+ 	新数组  []
+    arr.concat(['apple','banana','orange']); 拼接数组
+	原数组  [1,2,3,4,5,6,7,8,9];
+ 	新数组  [1, 2, 3, 4, 5, 6, 7, 8, 9, "apple", "banana", "orange"]
+    arr.join('-');数组转字符串
+	原数组  [1,2,3,4,5,6,7,8,9];
+ 	新数组  1,2,3,4,5,6,7,8,9；
+
+    arr.indexOf() 与 str.index() 一样
+    arr.slice() 与 str.substring() 一样
+
+
+3.object  对象
+    let obj = {
+        name:'张三',
+        age:19,
+        h-height:180
+    }
+    obj.name  //张三
+    obj['name']  //张三
+    obj['h-height'] // 180  此处不能用 obj.h-height
+  删除  
+    delete obj.age;
+  是否有某一属性值
+    'age' in obj  //有就返回true，没有就返回false  对象内部继承也会返回true；
+    obj.hasOwnProperty('name') //有就返回true，没有就返回false； 建议用这个
+
+
+4.判断  if()  switch() 
+	JavaScript把null、undefined、0、NaN和空字符串''视为false，其他值一概视为true，因此上述代码条件判断的结果是true。
+
+
+5.循环  for(){};  for(let key in arr){};  while(){};  do{}while();
+for语句		for(var i = 0; i < 10; i++){alert(i);}
+do...while语句	var i = 0;do{alert(i);i++;}while(i < 10);
+while语句	var i = 0;while(i < 10){alert(i);i++;}
+
+break语句和continue语句
+
+switch语句
+	var age = prompt('请输入年龄',20);
+	switch(true){case age < 0:alert('别这样，严肃点！');break;
+		default:alert('这是要成精的节奏啊！');}
+    
